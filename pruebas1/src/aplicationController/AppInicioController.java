@@ -1,10 +1,16 @@
 package aplicationController;
+import java.io.IOException;
+
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class AppInicioController {
 
@@ -18,17 +24,30 @@ public class AppInicioController {
     private PasswordField txt_Contrasenia;
 
     @FXML
-    void acceder() {
-    	Alert alert = new Alert(AlertType.WARNING);
-    	
+    void acceder() throws IOException {    	
     	if (validarCampos())
     	{
     		if(validaAcceso()) {
-    			alert.setTitle("Inicio");
-            	alert.setHeaderText("Bienvenido");
-            	alert.setContentText("acceso confirmado");
-            	alert.showAndWait();
+    			Alert alert1 = new Alert(AlertType.INFORMATION);
+    			alert1.setTitle("Inicio");
+            	alert1.setHeaderText("Bienvenido");
+            	alert1.setContentText("acceso confirmado");
+            	alert1.showAndWait();
+            	try {
+            		//dirigir a otro formulario
+                	FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("../aplicationFxml/Cliente.fxml"));
+                	Parent root1= (Parent)fxmlLoader.load();
+                	Stage stage= new Stage();
+                	stage.setScene(new Scene(root1));
+                	stage.show();
+                	
+				} catch (Exception e) {
+					// TODO: handle exception
+					System.out.println(e.getMessage());
+				}
+            	
     		}else {
+    			Alert alert = new Alert(AlertType.WARNING);
     			alert.setTitle("Inicio");
             	alert.setHeaderText("Error de auntentificacion");
             	alert.setContentText("El usuario y/o contraseña son incorrectos");
@@ -36,7 +55,9 @@ public class AppInicioController {
     		}
     		
         	//dirigir a otro formulario
+    		
     	}else {
+    		Alert alert = new Alert(AlertType.WARNING);
     		alert.setTitle("Inicio");
         	alert.setHeaderText("No se completaron todos los campos");
         	alert.setContentText("Uno de los campos de este formulario esta vacio");

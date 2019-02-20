@@ -1,5 +1,7 @@
 package aplicationEntities;
 
-public class Detalle {
+public class Detalle
+{
+	
 
 }

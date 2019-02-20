@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="571.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplicationController.VentanaController">
+   <children>
+      <Label layoutX="65.0" layoutY="68.0" text="Cargar datos..." />
+      <Label fx:id="lbl_NombreCliente" layoutX="200.0" layoutY="68.0" text="NombreCliente" />
+      <TextField layoutX="189.0" layoutY="97.0" onAction="#txt_nombreCliente" />
+      <Button layoutX="198.0" layoutY="164.0" mnemonicParsing="false" onAction="#cargarInformacion" text="Cargar Datos" />
+   </children>
+</AnchorPane>

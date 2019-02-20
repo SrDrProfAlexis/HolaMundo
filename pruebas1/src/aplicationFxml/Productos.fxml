@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="fichaProductos" prefHeight="716.0" prefWidth="931.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1">
+   <children>
+      <Pane layoutX="14.0" layoutY="76.0" prefHeight="577.0" prefWidth="213.0">
+         <children>
+            <ImageView fitHeight="226.0" fitWidth="193.0" layoutX="17.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/camisa.jpg" />
+               </image>
+            </ImageView>
+            <Text fx:id="lbl_descripcion" layoutX="17.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Camisa a cuadro para hombres, caballeros y jovenes" textAlignment="JUSTIFY" wrappingWidth="178.99999496340752">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="lbl_nombre" layoutX="17.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Camisa a cuadro caballeros" textAlignment="CENTER" wrappingWidth="179.36507633328438">
+               <font>
+                  <Font name="Arial" size="21.0" />
+               </font>
+            </Text>
+            <Spinner fx:id="spn_cantidad" layoutX="53.0" layoutY="444.0" prefHeight="25.0" prefWidth="85.0" />
+            <Label layoutX="17.0" layoutY="417.0" text="Seleccione cantidad:">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="365.0" text="Peso:">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="392.0" text="Precio:">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_peso" layoutX="71.0" layoutY="367.0" text="200gr ">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_precio" layoutX="80.0" layoutY="394.0" text="30 $">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
