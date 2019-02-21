@@ -4,12 +4,59 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="571.0" prefWidth="759.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplicationController.VentanaController">
+<AnchorPane prefHeight="454.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplicationController.VentanaController">
    <children>
-      <Label layoutX="65.0" layoutY="68.0" text="Cargar datos..." />
-      <Label fx:id="lbl_NombreCliente" layoutX="200.0" layoutY="68.0" text="NombreCliente" />
-      <TextField layoutX="189.0" layoutY="97.0" onAction="#txt_nombreCliente" />
-      <Button layoutX="198.0" layoutY="164.0" mnemonicParsing="false" onAction="#cargarInformacion" text="Cargar Datos" />
+      <Label layoutX="65.0" layoutY="68.0" text="Nombre: ">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font></Label>
+      <Label fx:id="lbl_NombreCliente" layoutX="167.0" layoutY="68.0" text="NombreCliente">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font></Label>
+      <TextField layoutX="105.0" layoutY="324.0" onAction="#txt_nombreCliente" promptText="Alexis si se pudo carajo!!!" />
+      <Button layoutX="137.0" layoutY="359.0" mnemonicParsing="false" onAction="#cargarInformacion" text="Cargar Datos" />
+      <Label layoutX="65.0" layoutY="113.0" text="Cédula:">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="154.0" text="Email:">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="200.0" text="Dirección:">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="245.0" text="Teléfono:">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_cedula" layoutX="167.0" layoutY="119.0" text="NumCedula">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_email" layoutX="167.0" layoutY="154.0" text="dirElectronic">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_direccion" layoutX="167.0" layoutY="200.0" text="dir">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_telefono" layoutX="167.0" layoutY="245.0" text="telef">
+         <font>
+            <Font name="Arial" size="21.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
